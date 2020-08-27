@@ -10,13 +10,16 @@ The rest of the code as the asycnhronous is in the process of being executed doe
 Event listeners such as click are also passed to the web API(s) which keeps track on when a click has happened to execute the callback or function beneath it.
 
 
+The challenge comes when we require to use data that comes from an asynchronous function.If that data example when i am fetching data from a server does take sometime.
+
+Then the very next execution point that requires the data always returns undefined since the data has not yet comeback.
+
 ```
 
 **Notes by**
 
 ```
 Mbugua Caleb
-
 
 ```
 
