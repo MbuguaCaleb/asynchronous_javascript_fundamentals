@@ -14,6 +14,18 @@ The challenge comes when we require to use data that comes from an asynchronous 
 
 Then the very next execution point that requires the data always returns undefined since the data has not yet comeback.
 
+What i have looked at in this lesson is the three ways to work with promises(Asynchronous code).
+
+(a)Callbacks.Comes in handy .The only disadvantage is when you nest many loops within themselves.
+
+
+(b)Promises.A great solution in terms of writing your code cleaner and catching errors.Promise.all helps me execute more
+asynchronous code almost at the sametime.
+
+(c)Async await.It adds Syntatical sugar and is the easiest way to work with promises in javascript.Uses promises under the
+hood but with wat simpler syntax to write it.
+
+
 ```
 
 **Notes by**
