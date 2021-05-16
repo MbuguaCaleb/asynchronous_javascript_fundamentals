@@ -1,16 +1,53 @@
 // GET REQUEST
+// Promises are implemented by default for axios
 function getTodos() {
-  axios({
-    method: 'GET',
-    url: 'https://jsonplaceholder.typicode.com/todos',
-  })
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+  //Method 1 Get Request with parameters
+  // axios({
+  //   method: 'GET',
+  //   url: 'https://jsonplaceholder.typicode.com/todos',
+  //   params: {
+  //     _limit: 5,
+  //   },
+  // })
+  //   .then((res) => showOutput(res))
+  //   .catch((err) => console.log(err));
+
+  //Method 2 making a get request with parameters
+  // axios
+  //   .get('https://jsonplaceholder.typicode.com/todos', {
+  //     params: {
+  //       _limit: 5,
+  //     },
+  //   })
+  //   .then((res) => showOutput(res))
+  //   .catch((err) => console.log(err));
+
+  //Method 3
+
+  axios
+    .get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    .then((res) => showOutput(res))
+    .catch((err) => console.err(err));
+
+  //Method 4
+  //When i do not add a verb GET is executed by default
+  // axios('https://jsonplaceholder.typicode.com/todos?_limit=5')
+  //   .then((res) => showOutput(res))
+  //   .catch((err) => console.err(err));
 }
 
 // POST REQUEST
 function addTodo() {
-  console.log('POST Request');
+  axios({
+    method: 'POST',
+    url: 'https://jsonplaceholder.typicode.com/todos',
+    data: {
+      title: 'New Todo',
+      completed: false,
+    },
+  })
+    .then((res) => showOutput(res))
+    .catch((err) => console.log(err));
 }
 
 // PUT/PATCH REQUEST

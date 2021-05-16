@@ -2,6 +2,7 @@
 const getTodos = async () => {
   const response1 = await fetch('calebd.json');
 
+  /*I must check the status code*/
   if (response1.status !== 200) {
     throw new Error('Cannot fetch  the data');
   }
